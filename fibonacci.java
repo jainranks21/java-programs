@@ -1,14 +1,20 @@
-public class fibonacci {
-public static void main (String args[]){
-int a=0, b=1;
-int c=0;
-System.out.println("fibonacci series is : "+a);
-for(int i=0;i<15;i++){
-c=a+b;
-a=b;
-b=c;
-System.out.println("fibonacci series is :" +c);
-}
+import java.util.*;
+import java.lang.*;
+import java.io.*;
 
-}
+/* Takes a number as an input and prints n numbers of fibonnaci sequence.*/
+public class fibonacci {
+    public static void main (String args[]){
+        int current = 0, next = 1;
+        int temp_next = 0;
+        Scanner mScanner = new Scanner(System.in);
+        int n = mScanner.nextInt();
+        System.out.println("fibonacci series is :");
+        for(int i = 0; i < n; i++) {
+          System.out.println(current);
+          temp_next = current + next;
+          current = next;
+          next=temp_next;
+        }
+    }
 }
